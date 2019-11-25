@@ -1,0 +1,144 @@
+body {
+    position: relative;
+    background: #85A5D4;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    min-height: 500px;
+}
+
+.container {
+    width: 60%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px 20px 60px 20px;
+    text-align: center;
+    -webkit-box-shadow: 1px 0px 12px 0px rgba(50, 50, 50, 0.6);
+    -moz-box-shadow: 1px 0px 12px 0px rgba(50, 50, 50, 0.6);
+    box-shadow: 1px 0px 12px 0px rgba(50, 50, 50, 0.6);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-radius: 1%;
+}
+
+.card {
+    width: 33%;
+    cursor: pointer;
+    border-radius: 1%;
+    padding-bottom: 3%;
+    padding-top: 2%;
+}
+
+.card:hover {
+    background: #F5F4F6;
+}
+
+h5 {
+    text-transform: uppercase;
+    color: #607CC5;
+    font-size: 2em;
+    margin: 0;
+}
+
+h5::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100px;
+    background-size: 80px 100px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.mobile::before {
+    content: '';
+    background-image: url("../images/device.svg");
+}
+
+.desktop::before {
+    content: '';
+    background-image: url("../images/laptop.svg");
+}
+
+.tv::before {
+    background-image: url("../images/monitor.svg");
+}
+
+.close::before {
+    background-image: url("../images/cross.svg");
+}
+
+p {
+    font-size: 1em;
+    color: #B8B8B8;
+    line-height: 1.5em;
+    width: 95%;
+}
+
+span {
+    font-size: 1em;
+    color: #607CC5;
+}
+
+.currency {
+    font-size: 1em;
+    color: #607CC5;
+    font-style: normal;
+    display: inline-block;
+    vertical-align: 10px;
+}
+
+.price {
+    font-size: 2em;
+    color: #607CC5;
+}
+
+button {
+    width: 170px;
+    margin: 0 auto;
+    margin-top: 3%;
+    background: #3252FE;
+    border-radius: 5px;
+    padding: 15px 0;
+    border: none;
+    font-weight: bold;
+    font-size: 1em;
+    color: white;
+    display: block;
+    position: static;
+}
+
+.modal {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.modal-content {
+    background-color: #fff;
+    border-radius: 1%;
+    position: relative;
+    height: 100%;
+    width: 40%;
+}
+
+.close {
+    width: 20px;
+    height: 20px;
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 67%;
+    z-index: 1;
+    cursor: pointer;
+}
