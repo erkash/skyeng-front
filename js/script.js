@@ -1,22 +1,25 @@
-let mobile = document.querySelector('#mobile'),
-    desktop = document.querySelector('#desktop'),
-    tv = document.querySelector('#tv'),
-    modal = document.querySelector('.modal'),
-    close = document.querySelector('.close'),
+const $ = selector => document.querySelector(selector)
+const $$ = selector => document.createElement(selector)
+
+let mobile = $('#mobile'),
+    desktop = $('#desktop'),
+    tv = $('#tv'),
+    modal = $('.modal'),
+    close = $('.close'),
     body = document.getElementsByTagName('body');
 
 
 function openModal(id, modal) {
     id.addEventListener('click', () => {
         body[0].style = 'background-color: rgba(0, 0, 0, 0.7)';
-        let div = document.createElement('div'),
-            h5 = document.createElement('h5'),
-            h3 = document.createElement('h3'),
-            p = document.createElement('p'),
-            span = document.createElement('span'),
-            i = document.createElement('i'),
-            b = document.createElement('b'),
-            button = document.createElement('button')
+        let div = $$('div'),
+            h5 = $$('h5'),
+            h3 = $$('h3'),
+            p = $$('p'),
+            span = $$('span'),
+            i = $$('i'),
+            b = $$('b'),
+            button = $$('button')
         h3.textContent = 'Confirmation'
         button.textContent = 'Confirm and pay'
         div.classList.add('modal-content')
@@ -49,7 +52,6 @@ close.addEventListener('click', () => {
     body[0].style = 'background-color: #85A5D4';
     modal.removeChild(modalContent)
     modal.style.display = 'none'
-
 })
 
 openModal(mobile, modal)
